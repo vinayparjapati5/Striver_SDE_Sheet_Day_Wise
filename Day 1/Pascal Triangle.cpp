@@ -43,7 +43,7 @@ void pascaltriangle(int n){
   long long ans = 1;
   cout<<ans<<""; // print 0th element
 
-for(int i=1; i<=n; i++){
+for(int i=1; i<n; i++){
 ans = ans*(n-i);
 ans = ans/i;
 cout<<ans<<"";
@@ -96,7 +96,7 @@ SPACE COMPLEXITY: O(1)
   vector<int>ansRow;
   ansRow.push_back(1); // print 0Th element
 
-  for(int col=1; col<=row; col++){
+  for(int col=1; col<row; col++){
     ans = ans* (row-col);
     ans = ans/col;  
     ansRow.push_back(ans);
@@ -108,7 +108,7 @@ return ansRow;
 vector<vector<int>>pascaltriangle(int n){
   vector<vector<int>>ans;
 
-for(row = 1; row<=n; row++){
+for(int row = 1; row<=n; row++){
 ans.push_back(generateRow(row));
 }
 return ans;
